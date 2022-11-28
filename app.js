@@ -6,7 +6,7 @@ import router from "./routes/user-routes";
 import cors from "cors";
 const app = express();
 app.use(cors({
-  origin: "https://startling-liger-279da3.netlify.app/",
+  origin: "http://localhost:3000",
 }));
 
 // app.use (function (req, res, next) { 
