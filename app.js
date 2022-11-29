@@ -5,9 +5,7 @@ import blogRouter from "./routes/blog-routes";
 import router from "./routes/user-routes";
 import cors from "cors";
 const app = express();
-app.use(cors(
-  {origin :'http://localhost:3000',}
-));
+app.use(cors());
 
 // app.use (function (req, res, next) { 
 //   res.header ("Access-Control-Allow-Origin", "http://localhost:3000"); 
@@ -24,7 +22,7 @@ mongoose
   .connect(
     "mongodb://hk:hk123456789@ac-uqo0ts4-shard-00-00.6x2izdl.mongodb.net:27017,ac-uqo0ts4-shard-00-01.6x2izdl.mongodb.net:27017,ac-uqo0ts4-shard-00-02.6x2izdl.mongodb.net:27017/?ssl=true&replicaSet=atlas-87usgj-shard-0&authSource=admin&retryWrites=true&w=majority"
   )
-  .then(() => app.listen(process.env.port || '5000' ))
+  .then(() => app.listen(5000))
   .then(() =>
     console.log("Connected TO Database and Listening TO Localhost 5000")
   )
